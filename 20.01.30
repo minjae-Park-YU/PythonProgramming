@@ -1,0 +1,43 @@
+from datetime import datetime
+
+Date_f = open("Date.txt", 'r') #날짜 파일 읽기
+Index_f = open("Index.txt", 'r') #내용 파일 읽기
+today = datetime.today().strftime("%Y%m%d") #오늘 날짜
+
+date = [] #가상메모리 상의 리스트
+index = [] #가상메모리 상의 리스트
+count = 0 #날짜 매칭시 필요한 카운트
+
+while True: #무한루프
+     line1 = Date_f.readline()
+     date.append(line1)
+     if not line1: break
+
+while True:
+     line2 = Index_f.readline()
+     index.append(line2)
+     if not line2: break
+
+while True:
+    date.append(input("날짜 입력 : "))
+    index.append(input("내용 입력 : "))
+    a = input("저장하려면 1번, 계속하려면 enter")
+    if a == '1':
+        break
+
+Date_f.close()
+Index_f.close()
+
+f1 = open("Date.txt", 'w')
+f2 = open("Index.txt", 'w')
+
+f1.write('\n'.join(date))   #
+f2.write('\n'.join(index))
+
+f1.close()
+f2.close()
+
+for i in date:
+    if i == today:
+        print()
+    count += 1
