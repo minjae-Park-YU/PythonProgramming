@@ -31,7 +31,7 @@ Index_f.close()
 f1 = open("Date.txt", 'w')
 f2 = open("Index.txt", 'w')
 
-f1.write('\n'.join(date))   #
+f1.write('\n'.join(date))   
 f2.write('\n'.join(index))
 
 f1.close()
