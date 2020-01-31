@@ -25,7 +25,7 @@ def wordtest(wordlistE, wordlistK):
             print("정답입니다.")
         else:
             print("오답입니다. 정답은 {} 입니다." .format(wordlistK[p]))
-        i += 1
+            i += 1
 
 def resetword():
     we = open("english.txt", 'w')
