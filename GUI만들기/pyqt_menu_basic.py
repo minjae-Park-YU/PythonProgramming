@@ -1,5 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QMenu, qApp #위젯 대신 메인윈도우로 사용
+# from PyQt5.QtCore import QCoreApplication
+
 
 class Exam(QMainWindow):
     def __init__(self):
@@ -24,7 +26,8 @@ class Exam(QMainWindow):
         new_py = QAction("파이썬 파일", self)
         view_stat = QAction("상태 표시줄", self, checkable = True) #체크박스 : checkable = True
         view_stat.setChecked(True) #디폴트 값 : 체크된 상태
-
+           
+        # File_exit.triggered.connect(QCoreApplication.instance().quit)
         File_exit.triggered.connect(qApp.quit)
         view_stat.triggered.connect(self.tglStat)
 
