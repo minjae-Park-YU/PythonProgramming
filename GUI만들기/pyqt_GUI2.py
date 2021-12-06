@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox #메시지 팝업창
-from PyQt5.QtCore import QCoreApplication #버튼누르면 동작하게 하는 모듈 불러오기
+from PyQt5.QtCore import QCoreApplication #버튼누르면 동작하게 하는 모듈 불러오기, 동작 관련 모듈
 
 class Exam(QWidget):
     def __init__(self):
