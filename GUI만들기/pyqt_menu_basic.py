@@ -49,7 +49,7 @@ class Exam(QMainWindow):
         else:
             self.statusBar().hide()
 
-    def contextMenuEvent(self, QContextMenuEvent):
+    def contextMenuEvent(self, QContextMenuEvent): # 오른쪽 마우스 눌렀을 때 나오는 메뉴, Override 해서 사용
         cm = QMenu(self)
 
         quit = cm.addAction("Quit")
