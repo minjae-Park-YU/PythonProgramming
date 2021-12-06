@@ -1,5 +1,5 @@
 #버튼 위치는 유지하는데, 창크기 늘어나도 버튼 크기는 세로로 안늘어남
-
+# GridLayout
 import sys
 from PyQt5.QtWidgets import (QWidget, QGridLayout, QPushButton, QApplication)
 
